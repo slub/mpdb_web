@@ -1,0 +1,70 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
+        layoutRootPath = EXT:mpdb_web/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:mpdb_web/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:mpdb_web/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+############
+### PAGE ###
+############
+page = PAGE
+page {
+    typeNum = 0
+    fluidtemplate {
+        layoutRootPath = EXT:mpdb_web/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:mpdb_web/Resources/Private/Partials/Page/
+        templateRootPath = EXT:mpdb_web/Resources/Private/Templates/Page/
+    }
+    meta {
+        description =
+        author =
+        keywords =
+        viewport = width=device-width, initial-scale=1
+        robots = index,follow
+        apple-mobile-web-app-capable = no
+        compatible = IE=edge
+    }
+    tracking {
+        google {
+            trackingID =
+            anonymizeIp = 1
+        }
+    }
+}
+
+#json = PAGE
+#json {
+#    typeNum = 1
+#    10 =< tt_content.list.20.publisherdb_fepublisherdb
+#
+#    config {
+#        disableAllHeaderCode = 1
+#        additionalHeaders.10.header = Content-type:application/json
+#        xhtml_cleaning = 0
+#        admPanel = 0
+#    }
+#}
+
+##############
+### CONFIG ###
+##############
+config {
+    no_cache = 1
+    removeDefaultJS = 0
+    admPanel = 1
+    prefixLocalAnchors = all
+    headerComment = build by sitepackagebuilder.com
+    sendCacheHeaders = 1
+}

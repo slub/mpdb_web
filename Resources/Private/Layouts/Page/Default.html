@@ -1,0 +1,72 @@
+<!--
+	<div id="debug">
+		<span class="small"> small </span>
+		<span class="medium"> medium </span>
+		<span class="large"> large </span>
+		<span class="xlarge"> xlarge </span>
+		<span class="xxlarge"> xxlarge </span>
+	</div>
+-->
+
+<div class="grid-wrap">
+<div class="title-bar" data-responsive-toggle="header" data-hide-for="medium">
+	<button type="button" data-toggle="header"><img src="typo3conf/ext/guv_sitepackage/Resources/Public/Icons/logo.svg" height="50" width="50" alt="Das Logo der Musikverlagsdatenbank: Der Bauch eines Violinschlüssels."></button>
+	<div class="title-bar-title">Musikverlagsdatenbank</div>
+</div>
+
+<header id="header">
+	<div>
+		<div>
+			<f:link.page pageUid="{settings.rootPage.pid}">
+				<img class="medium" src="typo3conf/ext/guv_sitepackage/Resources/Public/Icons/logo-redellipse-mvdb.svg" width="160" height="120" alt="Das Logo der Musikverlagsdatenbank: Der Bauch eines Violinschlüssels.">
+				<img class="from-large" src="typo3conf/ext/guv_sitepackage/Resources/Public/Icons/logo-redellipse-mvdb-long.svg" width="320" height="170" alt="Das Logo der Musikverlagsdatenbank: Der Bauch eines Violinschlüssels.">
+			</f:link.page>
+		</div>
+		<nav>
+			<menu>
+				<menuitem id="nav-start"> 
+					<f:link.page pageUid="{settings.rootPage.pid}">
+						Startseite 
+					</f:link.page>
+				</menuitem>
+				<f:for each="{mainnavigation}" as="mainnavigationItem">
+					<menuitem>
+						<a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}">
+							{mainnavigationItem.title}
+						</a>
+					</menuitem>
+				</f:for>
+			</menu>
+		</nav>
+	</div>
+	<span> SächsStA-L, 21070, C. F. Peters, Leipzig, Nr. 5210 </span>
+</header>
+
+<!--
+<h1> 
+	<span class="head"> Musikverlagsdatenbank </span>
+	<span class="subheader"> mvdb </span>
+</h1>
+-->
+
+<f:render section="Main" />
+
+<footer>
+	<menu>
+		<f:for each="{metanavigation}" as="metanavigationItem">
+			<menuitem>
+				<a href="{metanavigationItem.link}"> 
+					{metanavigationItem.title}
+				</a>
+			</menuitem>
+		</f:for>
+	</menu>
+	<p>
+		<span> &copy; 2021, Sächsische Landesbibliothek &ndash; </span>
+		<span> Staats- und Universitätsbibliothek </span>
+		<span> Dresden (SLUB) </span>
+	</p>
+</footer>
+</div>
+
+<f:render partial="Matomo" />
