@@ -1,0 +1,366 @@
+main {
+	@include xy-cell(auto);
+}
+
+.grid-wrap {
+	hyphens: auto;
+	min-height: 100vh;
+	@include xy-grid(vertical);
+	@include xy-grid-container(1400px, 0);
+	
+}
+
+.title-bar-title {
+	width: 100%;
+	text-align: right;
+	font-size: 130%;
+	font-family: 'Cotham Sans';
+}
+
+
+.small {
+	@include show-for-only(small);
+}
+.medium {
+	@include show-for-only(medium);
+}
+.large {
+	@include show-for-only(large);
+}
+.from-large {
+	@include show-for(large);
+}
+.xlarge {
+	@include show-for-only(xlarge);
+}
+.xxlarge {
+	@include show-for-only(xxlarge);
+}
+
+.grid-wrap>header{
+
+	//@include breakpoint(xxlarge) {
+		//padding: 0;
+		//padding-bottom: 1em;
+	//}
+}
+
+//h1 {
+	//padding-top: 15px;
+	//padding-left: 15px;
+	//padding-right: 15px;
+	//width: 100%;
+	//font-size: 300%;
+	//margin-bottom: $global-margin;
+	//@include breakpoint(medium) {
+		//padding-bottom: 1em;
+		//border-bottom: solid 1px $medium-gray;
+		//font-size: 270%;
+	//}
+
+	//.head {
+		//@include show-for(medium);
+		//float: left;
+	//}
+
+	//.subheader {
+		//@include breakpoint(medium) {
+			//display: block;
+			//width: 100%;
+			//text-align: right;
+		//}
+	//}
+
+	//&::after {
+		//clear: both;
+	//}
+	
+	//span {
+		//height: 100%;
+	//}
+//}
+
+.grid-wrap>header {
+	@include xy-cell(shrink);
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 15px;
+	padding-bottom: 0;
+	margin-bottom: $global-margin;
+
+	@include breakpoint(medium) {
+		padding: $global-margin;
+		padding-bottom: 0;
+	}
+	@include breakpoint(xxlarge) {
+		margin-top: (2 * $global-margin);
+	}
+	@include breakpoint(medium) {
+		background-image: url(../Images/PE_Buch_picture_gray.png);
+		background-position: 50% 0;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		//background-size: cover;
+	}
+
+	div {
+		&>div>a {
+			display: block;
+			padding: (2 * $global-margin);
+		}
+
+		&>nav>menu {
+			margin: $global-margin;
+		}
+
+		&>div>a, &>nav>menu {
+			background-color: hsla(60, 0%, 100%, 0.8);
+		}
+	}
+
+	span {
+		@include show-for(medium);
+		color: $white;
+		font-size: 70%;
+		font-weight: bold;
+		height: 100%;
+		float: right;
+		vertical-align: bottom;
+		background-color: hsla(60, 0%, 0%, 0.3);
+		padding: (0.5 * $global-margin);
+		margin-top: (3 * $global-margin);
+		margin-right: (- $global-margin);
+	}
+
+	div {
+		@include media-object-container;
+
+		div, nav {
+			@include media-object-section;
+		}
+
+		div a {
+			@include show-for(medium);
+			img {
+				@include breakpoint(medium) {
+					width: 150;
+					height: 150;
+				}
+			}
+		}
+
+		nav {
+			width: 100%;
+			margin-top: 20px;
+			@include breakpoint(medium) {
+				@include menu-align(right);
+			}
+		}
+
+		nav #nav-start {
+			@include hide-for(medium);
+		}
+
+		menu {
+			@include breakpoint(medium) {
+				float: right;
+			}
+			@include breakpoint(large) {
+				margin-top: 60px;
+			}
+		}
+	}
+}
+
+aside>div>menu {
+	@include menu-base;
+	@include menu-direction(vertical);
+	@include show-for(medium);
+	font-weight: bold;
+	//text-transform: uppercase;
+	//font-size: 115%;
+}
+
+nav>menu, footer>menu {
+	@include menu-base;
+	@include menu-direction(vertical);
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 115%;
+	@include breakpoint(medium) {
+		@include menu-direction(horizontal);
+		font-size: 100%;
+	}
+}
+
+main {
+	@include xy-grid(vertical);
+	@include breakpoint(medium) {
+		@include xy-grid(horizontal);
+	}
+	
+	aside {
+		@include xy-cell(full);
+		margin: 0 0 0 0;
+		@include breakpoint(medium) {
+			border-left: 1px solid $medium-gray;
+			order: 2;
+			@include xy-cell(shrink);
+		}
+		@include breakpoint(xlarge) {
+			margin-right: auto;
+		}
+
+		menu {
+			font-size: 100%;
+			text-align: right;
+		}
+
+		img {
+			display: block;
+			width: 200px;
+			margin: $global-margin;
+		}
+	}
+
+	article {
+		@include xy-cell(full);
+		@include breakpoint(medium) {
+			order: 1;
+			@include xy-cell(auto);
+		}
+
+		@include breakpoint(xlarge) {
+			//max-width: 1000px;
+			margin-left: auto;
+			border-left: 1px solid $medium-gray;
+			padding-left: $global-margin;
+		}
+
+		@include breakpoint(xxlarge) {
+			//max-width: 1200px;
+		}
+
+		header {
+			padding-left: 0;
+
+			h2 {
+				font-size: 115%;
+
+				@include breakpoint(medium) {
+					font-size: 130%;
+					margin-top: 1em;
+				}
+			}
+
+			h3 {
+				display: none;
+			}
+		}
+	}
+}
+
+footer {
+	@include xy-cell(shrink);
+	margin: 0;
+	padding-top: 20px;
+	@include breakpoint(large) {
+		@include xy-grid;
+		background-color: $light-gray;
+	}
+
+	@include breakpoint(xxlarge) {
+		background-color: $white;
+		border-top: 1px solid $medium-gray;
+		margin-top: $global-margin;
+	}
+
+	menu {
+		padding-top: $global-margin;
+		padding-bottom: $global-margin;
+		background-color: $light-gray;
+		font-size: 105%;
+	}
+
+	p {
+		font-size: 90%;
+		padding: 15px;
+		background-color: $black;
+		padding-top: 20px;
+		padding-bottom: 50px;
+		margin-bottom: 0;
+		color: $white;
+
+		span {
+			display: inline-block;
+		}
+	}
+
+	menu, p {
+		@include breakpoint(large) {
+			background-color: $light-gray;
+			color: $black;
+			font-weight: bold;
+			@include xy-cell(auto);
+		}
+		@include breakpoint(xxlarge) {
+			background-color: $white;
+		}
+	}
+
+	menu {
+		@include breakpoint(xxlarge) {
+			@include xy-cell(40%);
+		}
+	}
+
+	p {
+		@include breakpoint(xxlarge) {
+			padding-top: 28px;
+			@include xy-cell(60%);
+		}
+	}
+}
+
+.stat {
+	font-family: 'Cotham Sans';
+	margin-right: .2em;
+	
+	&:not(:first-child) {
+		margin-left: .2em;
+	}
+}
+
+article {
+	p {
+		font-weight: normal;
+		font-style: normal;
+		em {
+			font-style: italic;
+			font-weight: normal;
+		}
+	}
+}
+
+.news-img-wrap .mediaelement {
+	border: 1px solid #cacaca;
+	padding: 5px;
+}
+
+figure.image {
+	img {
+		padding: 5px;
+		border: 1px solid #cacaca;
+	}
+	figcaption {
+		color: #888;
+	}
+}
+
+.news {
+	h3 {
+		font-size: 120%
+	}
+}
+

@@ -154,7 +154,8 @@ page {
     }
 
     includeCSS {
-        mpdb_web_layout = EXT:mpdb_web/Resources/Public/Css/layout.min.css
+        #mpdb_web_layout = EXT:mpdb_web/Resources/Public/Css/layout.min.css
+        mpdb_web_layout = EXT:mpdb_web/Resources/Public/Scss/layout.scss
     }
 
     includeJSLibs {
