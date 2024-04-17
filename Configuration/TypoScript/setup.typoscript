@@ -2,18 +2,13 @@
 #### DEPENDENCIES ####
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
-
-
-################
-#### HELPER ####
-################
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mpdb_web/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mpdb_presentation/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mpdb_core/Configuration/TypoScript/setup.typoscript">
 
 
 ##############
 #### PAGE ####
 ##############
-page = PAGE
 page {
     typeNum = 0
     shortcutIcon = EXT:mpdb_web/Resources/Public/Icons/favicon.ico
@@ -159,8 +154,8 @@ page {
     }
 
     includeCSS {
-        jqueryui = EXT:mpdb_web/Resources/Public/Css/jquery-ui.min.css
-        mpdb_web_layout = EXT:mpdb_web/Resources/Public/Css/layout.min.css
+        #mpdb_web_layout = EXT:mpdb_web/Resources/Public/Css/layout.min.css
+        mpdb_web_layout = EXT:mpdb_web/Resources/Public/Scss/layout.scss
     }
 
     includeJSLibs {
@@ -171,22 +166,13 @@ page {
     }
 
     includeJSFooterlibs {
-#        jquery = EXT:guv_sitepackage/Resources/Public/JavaScript/jquery/dist/jquery.min.js -> mpdb_core
-#        jqueryui = EXT:guv_sitepackage/Resources/Public/JavaScript/jquery/dist/jquery-ui.min.js -> weg
-#        foundationlib = EXT:guv_sitepackage/Resources/Public/JavaScript/foundation-sites/dist/js/foundation.min.js -> mpdb_core
-#        whatinput = EXT:guv_sitepackage/Resources/Public/JavaScript/what-input/dist/what-input.min.js -> mpdb_core
 #        d3 = EXT:guv_sitepackage/Resources/Public/JavaScript/Dist/d3.min.js -> mpdb_presentation
-#        constants = EXT:publisher_db/Resources/Public/JavaScript/Constants.js -> ???
-#        vuejs = EXT:publisher_db/Resources/Public/JavaScript/dist/vue.js -> weg
     }
 
     includeJSFooter {
-#		foundation = EXT:guv_sitepackage/Resources/Public/JavaScript/Dist/app.js -> mpdb_core
-#		foundation.type = module -> mpdb_core
 #		timeline = EXT:guv_sitepackage/Resources/Public/JavaScript/Dist/timeline.js -> weg
 #		sidemenu = EXT:guv_sitepackage/Resources/Public/JavaScript/Dist/sidemenu.js -> weg
 #		active = EXT:guv_sitepackage/Resources/Public/JavaScript/Dist/active.js -> ???
-#		research = EXT:guv_sitepackage/Resources/Public/JavaScript/Dist/research.js -> mpdb_presentation
 #		beta = EXT:guv_sitepackage/Resources/Public/JavaScript/Dist/beta.js -> weg
 #		slidetoggle = EXT:guv_sitepackage/Resources/Public/JavaScript/Dist/slidetoggle.js -> weg
 #		persongraph = EXT:publisher_db/Resources/Public/JavaScript/PersonGraph.js -> weg
@@ -196,13 +182,7 @@ page {
 #		makrograph = EXT:publisher_db/Resources/Public/JavaScript/MakroGraph.js -> weg
 #		workgraph = EXT:publisher_db/Resources/Public/JavaScript/WorkGraph.js -> weg
 #		workview = EXT:publisher_db/Resources/Public/JavaScript/WorkView.js -> weg
-#		lastVisited = EXT:publisher_db/Resources/Public/JavaScript/LastVisitedFe.js -> mpdb_presentation
 #		indexGraph = EXT:publisher_db/Resources/Public/JavaScript/IndexGraph.js -> weg
-#		visualizationController = EXT:publisher_db/Resources/Public/JavaScript/Graphs/VisualizationController.js -> mpdb_presentation
-#		tableController = EXT:publisher_db/Resources/Public/JavaScript/Graphs/TableController.js -> mpdb_presentation
-#		graphController = EXT:publisher_db/Resources/Public/JavaScript/Graphs/GraphController.js -> mpdb_presentation
-#		dashboardController = EXT:publisher_db/Resources/Public/JavaScript/Graphs/DashboardController.js -> mpdb_presentation
-#		visualizationStatus = EXT:publisher_db/Resources/Public/JavaScript/Graphs/VisualizationStatus.js -> mpdb_presentation
     }
 }
 

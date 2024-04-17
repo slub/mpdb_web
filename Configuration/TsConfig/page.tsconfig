@@ -1,0 +1,4 @@
+####################################
+#### NEW CONTENT ELEMENT WIZARD ####
+####################################
+@import 'EXT:mpdb_presentation/Configuration/TsConfig/Page/Mod/Wizards/Start.tsconfig'
