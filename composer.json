@@ -13,11 +13,11 @@
         "typo3/cms-rte-ckeditor": "^11",
         "typo3/cms-fluid-styled-content": "^11",
         "causal/ig_ldap_sso_auth": "^3",
-        "slub/publisher-db" : "dev-master"
+        "slub/mpdb-presentation" : "dev-test"
     },
     "autoload": {
         "psr-4": {
-            "Slub\\GuvSitepackage\\": "Classes/"
+            "Slub\\MpdbWeb\\": "Classes/"
         }
     },
     "extra": {
