@@ -1,5 +1,5 @@
 {
-    "name": "slub/guv-sitepackage",
+    "name": "slub/mpdb-web",
     "type": "typo3-cms-extension",
     "description": "templates for music publisher database",
     "homepage": "https://musikverlage.slub-dresden.de",
@@ -13,7 +13,7 @@
         "typo3/cms-rte-ckeditor": "^11",
         "typo3/cms-fluid-styled-content": "^11",
         "causal/ig_ldap_sso_auth": "^3",
-        "slub/publisher-db" : "dev-master"
+        "slub/mpdb-presentation" : "dev-dev"
     },
     "autoload": {
         "psr-4": {
@@ -22,7 +22,7 @@
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "guv-sitepackage"
+            "extension-key": "mpdb_web"
         }
     }
 }
