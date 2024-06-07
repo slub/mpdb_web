@@ -299,10 +299,28 @@
         }
     }
 
+    .entity-wrap {
+        @include xy-grid;
+    }
+
+    .entity-sidebar {
+        @include breakpoint(medium) {
+            @include xy-cell(30%);
+            order: 2;
+        }
+    }
+
     .work-authority-info, .person-authority-info {
         margin-top: $global-margin;
         margin-bottom: $global-margin;
         border: 1px solid #cacaca;
+    }
+
+    .graph-container {
+        @include breakpoint(medium) {
+            @include xy-cell(70%);
+            order: 1;
+        }
     }
 
     .work-info, .work-info-collection, .work-authority-info, .person-authority-info {
