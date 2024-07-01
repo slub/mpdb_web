@@ -1,5 +1,30 @@
 .tx-publisher-db {
   
+    #tx_mpdbpresentation_dashboard {
+        border: 1px solid $medium-gray;
+        background-color: $light-gray;
+        margin-bottom: $global-margin;
+
+        &>div {
+            border: 1px solid $medium-gray;
+            background-color: $white;
+            padding-left: $global-padding;
+            padding-right: $global-padding;
+            margin-top: $global-margin;
+            margin-bottom: $global-margin;
+            margin-right: $global-margin;
+            margin-left: $global-margin;
+
+            h3 {
+                font-size:100%;
+            }
+
+            &>div, &>p {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
     h1, p.data-type {
       margin-top: 30px;
     }
