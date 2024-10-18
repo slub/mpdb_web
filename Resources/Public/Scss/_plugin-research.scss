@@ -38,12 +38,16 @@
         max-height: 85vh;
         overflow: auto;
 
-        .thead {
+        thead {
             position: sticky;
             top: 0;
         }
 
-        .tfoot {
+        th {
+            padding-left: 20px;
+        }
+
+        tfoot {
             position: sticky;
             bottom: 0;
         }
