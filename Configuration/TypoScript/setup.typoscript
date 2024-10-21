@@ -1,7 +1,6 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:mpdb_presentation/Configuration/TypoScript/setup.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:mpdb_core/Configuration/TypoScript/setup.typoscript">
 
@@ -44,15 +43,12 @@ page {
         }
         templateRootPaths {
             0 = EXT:mpdb_web/Resources/Private/Templates/Page/
-            1 = {$page.fluidtemplate.templateRootPath}
         }
         partialRootPaths {
             0 = EXT:mpdb_web/Resources/Private/Partials/Page/
-            1 = {$page.fluidtemplate.partialRootPath}
         }
         layoutRootPaths {
             0 = EXT:mpdb_web/Resources/Private/Layouts/Page/
-            1 = {$page.fluidtemplate.layoutRootPath}
         }
         dataProcessing {
             110 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor

@@ -9,11 +9,10 @@
         "typo3/cms-core": "^11",
         "bk2k/bootstrap-package": "^12",
         "georgringer/news": "^9",
-        "slub/slub-be-users": "^11.5",
         "typo3/cms-rte-ckeditor": "^11",
         "typo3/cms-fluid-styled-content": "^11",
         "causal/ig_ldap_sso_auth": "^3",
-        "slub/mpdb-presentation" : "dev-main"
+        "slub/mpdb-presentation" : "@dev"
     },
     "autoload": {
         "psr-4": {
